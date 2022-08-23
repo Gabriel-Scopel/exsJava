@@ -1,0 +1,30 @@
+/*
+Exercício 2
+Escreva um aplicativo que lê 5 números entre 1 e 30. Para cada número lido,
+seu programa deve imprimir o mesmo número de asteriscos adjacentes. Por
+exemplo, se seu programa lê os números: 1, 3, 10, 2 e 5, ele deve imprimir:
+*
+***
+**********
+**
+***** 
+import java.util.Scanner;
+
+public class JavaApplication6 {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        for (int j = 1; j <= 5; j++) {
+            System.out.printf("Digite o %d valor: ", j);
+            int n = input.nextInt();
+            if (n < 30 && n > 1) {
+                for (int i = 0; i < n; i++) {
+                    System.out.printf("*");
+                }
+                System.out.println("");
+            }
+        }
+    }
+}
+*/
