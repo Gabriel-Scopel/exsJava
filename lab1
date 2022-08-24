@@ -1,4 +1,40 @@
 /*
+Exercício 1
+
+package javaapplication6;
+
+import java.util.Scanner;
+
+public class JavaApplication6 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.printf("Digite um valor para o lado do quadrado: ");
+        int n = input.nextInt();
+        for(int i=0; i<n; i++){
+            //verificando se é o primeiro ou última linha da impressão
+            if(i==0 || i+1==n){
+                for(int x=1; x<=n;x++){
+                    System.out.printf("*"); //se for imprime * em linha
+                }System.out.println("");
+            }else{//se não for imprime * com quebra de linha
+                for(int y=0; y<2;y++){
+                  System.out.printf("*");
+                  for(int z=1; z<n-1; z++){
+                      System.out.printf(" ");
+                  }
+                 
+                  
+                }System.out.println("");
+            }
+        }
+
+    }
+}
+*/
+
+/*
 Exercício 2
 Escreva um aplicativo que lê 5 números entre 1 e 30. Para cada número lido,
 seu programa deve imprimir o mesmo número de asteriscos adjacentes. Por
@@ -24,6 +60,62 @@ public class JavaApplication6 {
                 }
                 System.out.println("");
             }
+        }
+    }
+}
+*/
+
+/*
+Exercício 3
+package javaapplication10;
+
+import java.util.Scanner;
+
+public class JavaApplication10{
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.printf("Digite o salário: ");
+        double s = input.nextDouble();
+        String indice;
+        if(s>0 && s<400){
+            double ns = s+(s*0.15);
+            double dif = ns-s;
+            indice = "15%";
+            System.out.printf("Novo salário: "+ ns);
+            System.out.printf("o reajuste foi de %s", indice);
+            System.out.printf("a diferença do novo salário com o anterior é de %f", dif);
+        }else if(s>400 && s<800){
+            double ns = s+(s*0.12);
+            double dif = ns-s;
+            indice = "12%";
+            System.out.printf("Novo salário: "+ ns);
+            System.out.printf("o reajuste foi de %s", indice);
+            System.out.printf("a diferença do novo salário com o anterior é de %f", dif);
+        }else if(s>800 && s<1200){
+            double ns = s+(s*0.10);
+            double dif = ns-s;
+            indice = "10%";
+            System.out.printf("Novo salário: "+ ns);
+            System.out.printf("o reajuste foi de %s", indice);
+            System.out.printf("a diferença do novo salário com o anterior é de %f", dif);
+        }else if(s>1200 && s<2000){
+            double ns = s+(s*0.07);
+            double dif = ns-s;
+            indice = "7%";
+            System.out.printf("Novo salário: "+ ns);
+            System.out.printf("o reajuste foi de %s", indice);
+            System.out.printf("a diferença do novo salário com o anterior é de %f", dif);
+        }else if(s>2000){
+            double ns = s+(s*0.04);
+            double dif = ns-s;
+            indice = "4%";
+            System.out.printf("Novo salário: "+ ns);
+            System.out.printf("o reajuste foi de %s", indice);
+            System.out.printf("a diferença do novo salário com o anterior é de %f", dif);
+        }else{
+            System.out.printf("Digite um salário válido");
         }
     }
 }
